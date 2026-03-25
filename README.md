@@ -1,42 +1,123 @@
 IBTS — Intelligent Bus Transportation System
 
-IBTS is a smart, scalable web application designed to modernize government bus transportation systems in India. 
-It provides real-time tracking, route discovery, fare estimation, and online ticket booking
-— similar to IRCTC but for buses.
+📌 Overview
 
-Features
-🔍 Search Buses — Find buses by source and destination
-📍 Live Bus Tracking — Real-time location updates (core differentiator)
-💺 Seat Availability 
-💰 Fare Estimation — Transparent pricing system
+IBTS (Intelligent Bus Transportation System) is a full-stack web application designed to modernize government bus transportation systems in India. It provides real-time bus tracking, route discovery, fare estimation, and online booking — improving accessibility, transparency, and user experience.
+
+The system follows a modular architecture (MVC pattern) with a Node.js backend and a React-based frontend.
+
+🚀 Features
+
+🔍 Bus Search
+
+Users can search buses using source and destination cities.
+
+📍 Live Bus Tracking (Core Feature)
+
+Track buses in real-time using location-based services.
+
+🔐 Secure Backend API
+
+Structured API with controllers, models, and routes.
+
+🌱 Seeder Support
+
+Preload database with sample bus, city, and route data.
 
 
-Problem It Solves
-Lack of transparency in government bus systems
-No centralized booking platform
-Inefficient route and schedule tracking
-Low public adoption due to poor digital infrastructure
+ Problem Statement
 
+No centralized system for government buses
+Lack of real-time tracking
+Poor user experience compared to private platforms
+Low adoption of public transport
 
-Tech Stack
-Frontend : HTML, CSS, JavaScript and React
-Backend : Node.js 
-Database : SQLite / MongoDB / MySQL
-APIs & Tools : Google Maps API (for tracking )
+🛠️ Tech Stack
 
+Backend
+ : Node.js, 
+Express.js, 
+MongoDB.
 
+Frontend : 
+React.js ,
+Tailwind CSS ,
 
-Installation & Setup
+Tools & Utilities : 
+Postman (API testing) , 
+dotenv (.env config)
 
-1. Clone the repository
+📂 Project Structure
+```
+IBTS/
+├── backend/
+│   ├── configs/
+│   ├── controllers/
+│   │   └── buscontroller.js
+│   ├── models/
+│   │   ├── Bus.js
+│   │   ├── City.js
+│   │   └── Route.js
+│   ├── routes/
+│   │   └── busroutes.js
+│   ├── .env
+│   ├── package.json
+│   ├── seeder.js
+│   └── server.js
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── Search.js
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── package.json
+│   ├── tailwind.config.js
+│   └── postcss.config.js
+│
+├── .gitignore
+└── README.md
+
+```
+
+⚙️ Setup & Installation
+1. Clone Repository
 git clone https://github.com/your-username/ibts.git
 cd ibts
+2. Backend Setup
+cd backend
+npm install
 
-2. Setup backend
-  --->   cd backend
-  --->  npm start
+Create .env file : 
 
-3. Setup frontend
----> cd frontend
----> npm install
----> npm start
+PORT=5000 
+
+MONGO_URI=your_mongodb_connection
+
+Run server:
+
+npm run dev
+3. Frontend Setup
+cd frontend
+npm install
+npm start
+🔄 Application Flow
+1. Bus Search
+User enters source & destination
+Frontend sends request to backend API
+Backend fetches matching routes
+2. Data Handling
+Models:
+Bus.js → Bus details
+City.js → City mapping
+Route.js → Route connections
+3. API Layer
+Routes defined in busroutes.js
+Logic handled in buscontroller.js
+4. Seeder
+seeder.js populates database with initial data
+🔐 Security Measures
+Environment variables for sensitive data
+Structured backend separation (MVC)
+Input handling via API routes
