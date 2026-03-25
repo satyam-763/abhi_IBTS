@@ -1,38 +1,30 @@
 IBTS — Intelligent Bus Transportation System
 
-📌 Overview
+```---> Overview <---```
 
 IBTS (Intelligent Bus Transportation System) is a full-stack web application designed to modernize government bus transportation systems in India. It provides real-time bus tracking, route discovery, fare estimation, and online booking — improving accessibility, transparency, and user experience.
 
 The system follows a modular architecture (MVC pattern) with a Node.js backend and a React-based frontend.
 
-🚀 Features
+ ```---> Features --->```
 
-🔍 Bus Search
+1. Bus Search --->  Users can search buses using source and destination cities.
 
-Users can search buses using source and destination cities.
+2. Live Bus Tracking (Core Feature) ---> Track buses in real-time using location-based services.
 
-📍 Live Bus Tracking (Core Feature)
+3. Secure Backend API ---> Structured API with controllers, models, and routes.
 
-Track buses in real-time using location-based services.
-
-🔐 Secure Backend API
-
-Structured API with controllers, models, and routes.
-
-🌱 Seeder Support
-
-Preload database with sample bus, city, and route data.
+4. Seeder Support  ---> Preload database with sample bus, city, and route data.
 
 
- Problem Statement
+```---> Problem Statement <---```
 
 No centralized system for government buses
 Lack of real-time tracking
 Poor user experience compared to private platforms
 Low adoption of public transport
 
-🛠️ Tech Stack
+``` ---> 🛠️ Tech Stack <--- ```
 
 Backend
  : Node.js, 
@@ -41,7 +33,7 @@ MongoDB.
 
 Frontend : 
 React.js ,
-Tailwind CSS ,
+Tailwind CSS 
 
 Tools & Utilities : 
 Postman (API testing) , 
@@ -81,11 +73,15 @@ IBTS/
 
 ```
 
-⚙️ Setup & Installation
+```⚙️ Setup & Installation```
+
 1. Clone Repository
+
 git clone https://github.com/your-username/ibts.git
 cd ibts
+
 2. Backend Setup
+
 cd backend
 npm install
 
@@ -104,9 +100,10 @@ npm install
 npm start
 🔄 Application Flow
 1. Bus Search
-User enters source & destination
-Frontend sends request to backend API
-Backend fetches matching routes
+
+User enters source & destination --->
+Frontend sends request to backend API--->
+Backend fetches matching routes ---> User
 2. Data Handling
 Models:
 Bus.js → Bus details
